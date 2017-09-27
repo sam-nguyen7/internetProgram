@@ -1,0 +1,105 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css);
+
+*, *:after, *:before {
+  box-sizing: inherit;
+  margin: inherit;
+  padding: inherit;
+  font-family: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Droid Sans', sans-serif;
+  text-align: center;
+}
+
+a {
+  display: inline-block;
+  color: darken( #c2c2c2, 30%);
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  &:hover {
+    color: #136ad5;
+    .fa {
+      color: darken( #c2c2c2, 30%);
+    }
+  }
+}
+
+header, footer {
+  background-color: #3189F5;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  
+  span, a {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-weight: 700;
+  }
+}
+
+header {
+  line-height: 35px;
+  margin-bottom: 10px;
+  text-align: left;
+  box-shadow: 0 2px 5px 0 rgba(#32A3D5,0.75);
+  span {
+    &:first-child{
+      margin-right: 2px;
+      &:after{
+        content: ':';
+        margin-left: 2px;
+      }
+    }
+    &:last-child{
+      color: darken( #c2c2c2, 30%);
+    }
+  }
+}
+
+h6 {
+    text-align: left;
+}
+
+.list-group {
+  text-align: left;
+}
+
+.cog {
+  float:right;
+}
+
+.white {
+  color: white;
+  float: right;
+  font-size: 30px;
+}
+
+.left {
+  color: white;
+  font-size: 30px;
+}
+
+
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  padding: 3px 10px;
+  -webkit-box-shadow: 0 -2px 5px 0 rgba(#32A3D5,0.75);
+  -moz-box-shadow: 0 -2px 5px 0 rgba(#32A3D5,0.75);
+  box-shadow: 0 -2px 5px 0 rgba(#32A3D5,0.75);
+  .right {
+    position: absolute;
+    right: 15px;
+    text-transform: lowercase;
+  }
+}
