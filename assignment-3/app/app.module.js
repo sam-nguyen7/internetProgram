@@ -5,7 +5,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var websites_app_component_1 = require("./websites-app.component");
@@ -21,7 +23,8 @@ AppModule = __decorate([
         imports: [platform_browser_1.BrowserModule],
         declarations: [websites_app_component_1.WebsitesAppComponent, websites_list_component_1.WebsitesListComponent, website_thumbnail_component_1.WebsiteThumbnailComponent],
         bootstrap: [websites_app_component_1.WebsitesAppComponent]
-    })
+    }),
+    __metadata("design:paramtypes", [])
 ], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map
