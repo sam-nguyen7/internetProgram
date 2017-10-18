@@ -13,15 +13,15 @@ var UserService = (function () {
     function UserService() {
     }
     /* returns user in local users array if id matches userId*/
-    UserService.prototype.findUserById = function () {
+    UserService.prototype.findUserById = function (id) {
         return USERS.find(function (user) { return user.id === id; });
     };
     /* returns user in local users array if usernam matches username*/
-    UserService.prototype.findUserByUsername = function () {
-        return USERS.find(function (user) { return user.username === username; });
+    UserService.prototype.findUserByUsername = function (username) {
+        return USERS.find(function (user) { return user.userName === username; });
     };
-    UserService.prototype.findUserByCredentials = function () {
-        return USERS.find(user.username === username && user.password === password);
+    UserService.prototype.findUserByCredentials = function (username, password) {
+        return USERS.find(function (user) { return user.userName === username && user.password === password; });
     };
     return UserService;
 }());
@@ -31,9 +31,9 @@ UserService = __decorate([
 ], UserService);
 exports.UserService = UserService;
 var USERS = [
-    { id: "123", username: "alice", password: "alice", firstName: "Alice", lastName: "Wonder" },
-    { id: "234", username: "bob", password: "bob", firstName: "Bob", lastName: "Marley" },
-    { id: "345", username: "charly", password: "charly", firstName: "Charly", lastName: "Garcia" },
-    { id: "456", username: "jannunzi", password: "jannunzi", firstName: "Jose", lastName: "Annunzi" }
+    { id: "123", userName: "alice", password: "alice", firstName: "Alice", lastName: "Wonder" },
+    { id: "234", userName: "bob", password: "bob", firstName: "Bob", lastName: "Marley" },
+    { id: "345", userName: "charly", password: "charly", firstName: "Charly", lastName: "Garcia" },
+    { id: "456", userName: "jannunzi", password: "jannunzi", firstName: "Jose", lastName: "Annunzi" }
 ];
 //# sourceMappingURL=user.service.js.map

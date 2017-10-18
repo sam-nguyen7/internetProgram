@@ -8,14 +8,14 @@ import { UserService } from '../../services/user.service'
 
 export class LoginComponent {
     errorMessage:any
-    constructor(private userService: UserService: UserService, private router:Router) {
+    constructor(private userService: UserService, private route: Router) {
     }
-    login(user) {
+    login(userForm) {
         this.errorMessage=""
-        let user = UserService.findUserByCredentials(user.username, user.password);
+        let user = this.userService.findUserByCredentials(userForm.username, userForm.password);
         if(user) {
             //redirect to /user/user.id
-            this.router.navigate(['/user', user.id])
+            this.route.navigate(['/user', user.id])
         }
         else {
             //show error message

@@ -10,7 +10,7 @@ import { IUser } from './user.model';
 export class ProfileComponent {
 
     user:IUser
-    constructor(private userService: UserService) {
+    constructor(private userService: UserService, private route: ActivatedRoute ) {
         
     }
 

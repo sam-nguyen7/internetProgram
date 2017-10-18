@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var user_service_1 = require("../../services/user.service");
+var router_1 = require("@angular/router");
 var ProfileComponent = (function () {
-    function ProfileComponent(userService) {
+    function ProfileComponent(userService, route) {
         this.userService = userService;
+        this.route = route;
     }
     ProfileComponent.prototype.ngOnInit = function () {
         this.user = this.userService.findUserById(this.route.snapshot.params['uid']);
@@ -23,7 +25,7 @@ ProfileComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/user/profile.component.html'
     }),
-    __metadata("design:paramtypes", [user_service_1.UserService])
+    __metadata("design:paramtypes", [user_service_1.UserService, router_1.ActivatedRoute])
 ], ProfileComponent);
 exports.ProfileComponent = ProfileComponent;
 //# sourceMappingURL=profile.component.js.map

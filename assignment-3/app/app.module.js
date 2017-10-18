@@ -14,6 +14,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var websites_app_component_1 = require("./websites-app.component");
 var user_service_1 = require("./services/user.service");
 var routes_1 = require("./routes");
+var forms_1 = require("@angular/forms");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -23,7 +24,8 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
-            router_1.RouterModule.forRoot(routes_1.appRoutes)
+            router_1.RouterModule.forRoot(routes_1.appRoutes),
+            forms_1.FormsModule
         ],
         declarations: [websites_app_component_1.WebsitesAppComponent],
         providers: [user_service_1.UserService],
