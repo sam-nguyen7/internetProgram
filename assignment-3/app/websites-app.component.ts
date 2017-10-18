@@ -3,8 +3,9 @@
 @Component({
     selector: 'websites-app',
     template: `
-        <app-login></app-login>
-        <websites-list></websites-list>
+        
+        <router-outlet></router-outlet>
+        
         `
 })
 
