@@ -9,17 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var WebsitesAppComponent = (function () {
-    function WebsitesAppComponent() {
+var user_service_1 = require("../../services/user.service");
+var ProfileComponent = (function () {
+    function ProfileComponent(userService) {
+        this.userService = userService;
     }
-    return WebsitesAppComponent;
+    ProfileComponent.prototype.ngOnInit = function () {
+        this.user = this.userService.findUserById(this.route.snapshot.params['uid']);
+    };
+    return ProfileComponent;
 }());
-WebsitesAppComponent = __decorate([
+ProfileComponent = __decorate([
     core_1.Component({
-        selector: 'websites-app',
-        template: "\n        <app-login></app-login>\n        <websites-list></websites-list>\n        "
+        templateUrl: 'app/user/profile.component.html'
     }),
-    __metadata("design:paramtypes", [])
-], WebsitesAppComponent);
-exports.WebsitesAppComponent = WebsitesAppComponent;
-//# sourceMappingURL=websites-app.component.js.map
+    __metadata("design:paramtypes", [user_service_1.UserService])
+], ProfileComponent);
+exports.ProfileComponent = ProfileComponent;
+//# sourceMappingURL=profile.component.js.map

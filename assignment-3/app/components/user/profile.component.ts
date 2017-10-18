@@ -1,0 +1,20 @@
+import { Component } from '@angular/core'
+import { UserService } from '../../services/user.service'
+import { ActivatedRoute } from '@angular/router'
+import { IUser } from './user.model';
+
+@Component({
+    templateUrl: 'app/user/profile.component.html'
+})
+
+export class ProfileComponent {
+
+    user:IUser
+    constructor(private userService: UserService) {
+        
+    }
+
+    ngOnInit() {
+        this.user = this.userService.findUserById(this.route.snapshot.params['uid'])
+    }
+}

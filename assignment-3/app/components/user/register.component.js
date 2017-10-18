@@ -9,17 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var WebsitesListComponent = (function () {
-    function WebsitesListComponent() {
+var user_service_1 = require("../../services/user.service");
+var RegisterComponent = (function () {
+    function RegisterComponent(userService) {
+        this.userService = userService;
     }
-    return WebsitesListComponent;
+    return RegisterComponent;
 }());
-WebsitesListComponent = __decorate([
+RegisterComponent = __decorate([
     core_1.Component({
-        selector: 'websites-list',
-        template: '<p>Hello Class!</p>'
+        templateUrl: 'app/user/profile.component.html'
     }),
-    __metadata("design:paramtypes", [])
-], WebsitesListComponent);
-exports.WebsitesListComponent = WebsitesListComponent;
-//# sourceMappingURL=websites-list.componet.js.map
+    __metadata("design:paramtypes", [user_service_1.UserService])
+], RegisterComponent);
+exports.RegisterComponent = RegisterComponent;
+//# sourceMappingURL=register.component.js.map

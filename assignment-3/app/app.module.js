@@ -9,10 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var platform_browser_1 = require("@angular/platform-browser");
 var websites_app_component_1 = require("./websites-app.component");
-var websites_list_component_1 = require("./websites/websites-list.component");
-var website_thumbnail_component_1 = require("./websites/website-thumbnail.component");
+var user_service_1 = require("./services/user.service");
+var routes_1 = require("./routes");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,8 +21,12 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [websites_app_component_1.WebsitesAppComponent, websites_list_component_1.WebsitesListComponent, website_thumbnail_component_1.WebsiteThumbnailComponent],
+        imports: [
+            platform_browser_1.BrowserModule,
+            router_1.RouterModule.forRoot(routes_1.appRoutes)
+        ],
+        declarations: [websites_app_component_1.WebsitesAppComponent],
+        providers: [user_service_1.UserService],
         bootstrap: [websites_app_component_1.WebsitesAppComponent]
     }),
     __metadata("design:paramtypes", [])

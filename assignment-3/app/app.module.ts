@@ -1,17 +1,22 @@
 ﻿import { NgModule } from '@angular/core'
+import { Routes } from '@angular/router'
+import { RouterModule } from '@angular/router'
 import { BrowserModule } from '@angular/platform-browser'
 import { WebsitesAppComponent } from './websites-app.component'
-import { WebsitesListComponent } from './websites/websites-list.component'
-import { WebsiteThumbnailComponent } from './websites/website-thumbnail.component' 
+import { UserService } from './services/user.service'
+import { appRoutes } from './routes'
+
 
 @NgModule({
-    imports: [BrowserModule],
-    declarations: [WebsitesAppComponent, WebsitesListComponent, WebsiteThumbnailComponent ],
+    imports: [
+        BrowserModule, 
+        RouterModule.forRoot(appRoutes)
+             ],
+    declarations: [WebsitesAppComponent],
+    providers: [ UserService ],
     bootstrap: [WebsitesAppComponent]
 })
 
 export class AppModule {
+
 }
-
-
-
