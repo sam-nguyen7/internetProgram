@@ -18,7 +18,8 @@ var LoginComponent = (function () {
     }
     LoginComponent.prototype.login = function (userForm) {
         this.errorMessage = "";
-        var user = this.userService.findUserByCredentials(userForm.username, userForm.password);
+        console.log(userForm);
+        var user = this.userService.findUserByCredentials(userForm.userName, userForm.password);
         if (user) {
             //redirect to /user/user.id
             this.route.navigate(['/user', user.id]);
@@ -32,7 +33,7 @@ var LoginComponent = (function () {
 }());
 LoginComponent = __decorate([
     core_1.Component({
-        templateUrl: 'app/user/login.component.html'
+        templateUrl: 'app/components/user/login.component.html'
     }),
     __metadata("design:paramtypes", [user_service_1.UserService, router_1.Router])
 ], LoginComponent);

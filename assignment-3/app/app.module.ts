@@ -9,6 +9,10 @@ import { appRoutes } from './routes'
 
 import { FormsModule } from '@angular/forms'
 
+import { LoginComponent } from './components/user/login.component';
+import { ProfileComponent } from './components/user/profile.component';
+import { RegisterComponent } from './components/user/register.component';
+
 
 @NgModule({
     imports: [
@@ -16,7 +20,7 @@ import { FormsModule } from '@angular/forms'
         RouterModule.forRoot(appRoutes),
         FormsModule
              ],
-    declarations: [WebsitesAppComponent],
+    declarations: [WebsitesAppComponent, LoginComponent, ProfileComponent, RegisterComponent],
     providers: [ UserService ],
     bootstrap: [ WebsitesAppComponent ]
 })

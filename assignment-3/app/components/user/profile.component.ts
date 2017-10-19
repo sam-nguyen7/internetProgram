@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router'
 import { IUser } from './user.model';
 
 @Component({
-    templateUrl: 'app/user/profile.component.html'
+    templateUrl: 'app/components/user/profile.component.html'
 })
 
 export class ProfileComponent {

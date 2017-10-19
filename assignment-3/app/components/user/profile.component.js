@@ -23,7 +23,7 @@ var ProfileComponent = (function () {
 }());
 ProfileComponent = __decorate([
     core_1.Component({
-        templateUrl: 'app/user/profile.component.html'
+        templateUrl: 'app/components/user/profile.component.html'
     }),
     __metadata("design:paramtypes", [user_service_1.UserService, router_1.ActivatedRoute])
 ], ProfileComponent);

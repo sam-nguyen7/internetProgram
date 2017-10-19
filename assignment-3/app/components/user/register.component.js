@@ -18,7 +18,7 @@ var RegisterComponent = (function () {
 }());
 RegisterComponent = __decorate([
     core_1.Component({
-        templateUrl: 'app/user/profile.component.html'
+        templateUrl: 'app/components/user/register.component.html'
     }),
     __metadata("design:paramtypes", [user_service_1.UserService])
 ], RegisterComponent);
