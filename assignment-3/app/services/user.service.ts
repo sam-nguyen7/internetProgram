@@ -19,7 +19,20 @@ export class UserService
         return USERS.find(user => user.userName === username && user.password === password)
     }
 
-    /* need add, update and remove user */
+    createUser(user) {
+        USERS.push(user)
+    }
+    
+    updateUser(userId,user)
+    {
+        USERS[userId] = user
+    }
+    
+    deleteUser(userId)
+    {
+        delete USERS[userId];
+    }
+
 
 
 }

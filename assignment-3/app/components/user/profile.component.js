@@ -19,6 +19,9 @@ var ProfileComponent = (function () {
     ProfileComponent.prototype.ngOnInit = function () {
         this.user = this.userService.findUserById(this.route.snapshot.params['uid']);
     };
+    ProfileComponent.prototype.delete = function () {
+        this.userService.deleteUser(this.userService.findUserById(this.user.id));
+    };
     return ProfileComponent;
 }());
 ProfileComponent = __decorate([

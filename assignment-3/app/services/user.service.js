@@ -23,6 +23,15 @@ var UserService = (function () {
     UserService.prototype.findUserByCredentials = function (username, password) {
         return USERS.find(function (user) { return user.userName === username && user.password === password; });
     };
+    UserService.prototype.createUser = function (user) {
+        USERS.push(user);
+    };
+    UserService.prototype.updateUser = function (userId, user) {
+        USERS[userId] = user;
+    };
+    UserService.prototype.deleteUser = function (userId) {
+        delete USERS[userId];
+    };
     return UserService;
 }());
 UserService = __decorate([
