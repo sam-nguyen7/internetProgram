@@ -19,18 +19,24 @@ export class UserService
         return USERS.find(user => user.userName === username && user.password === password)
     }
 
-    createUser(user) {
-        USERS.push(user)
+    createUser(regUser) {
+        let id =(Math.random()*100).toString;
+        let idNum = String(Math.floor(Math.random()*100));
+        USERS.push({id: idNum, userName: regUser.userName, password: regUser.userName, firstName: regUser.userName, lastName: regUser.userName});
+        return USERS.find(user => user.userName === regUser.userName); 
+		
+	}
+    
+     updateUser(userId, updateForm) {
+        let updatedUser = {id: userId, userName: updateForm.userName, password: updateForm.password, firstName: updateForm.first, lastName: updateForm.last};
+        let i = USERS.findIndex(user => user.id === userId);
+        USERS.splice(i,1);
+        USERS.push(updatedUser);
     }
     
-    updateUser(userId,user)
-    {
-        USERS[userId] = user
-    }
-    
-    deleteUser(userId)
-    {
-        delete USERS[userId];
+    deleteUser(userId){
+        let i = USERS.findIndex(user => user.id === userId);
+        USERS.splice(i,1);
     }
 
 

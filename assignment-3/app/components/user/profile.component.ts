@@ -1,17 +1,19 @@
 import { Component,OnInit } from '@angular/core'
 import { UserService } from '../../services/user.service'
 import { ActivatedRoute } from '@angular/router'
-import { IUser } from './user.model';
-import { FormsModule }   from '@angular/forms';
+import { IUser } from './user.model'
+import { FormsModule }   from '@angular/forms'
+import { AuthService } from './auth.service'
+
 
 @Component({
     templateUrl: 'app/components/user/profile.component.html'
 })
 
-export class ProfileComponent implements OnInit{
+export class ProfileComponent {
 
     user:IUser
-    constructor(private userService: UserService, private route: ActivatedRoute ) {
+    constructor(private auth: AuthService, private route: ActivatedRoute, private router:Router, private userService: UserService ) {
         
     }
 
@@ -19,9 +21,13 @@ export class ProfileComponent implements OnInit{
         this.user = this.userService.findUserById(this.route.snapshot.params['uid'])
     }
 
-    delete()
+    deleteAccount()
     {
-        
-        this.userService.deleteUser(this.userService.findUserById(this.user.id))
+        this.userService.deleteUser(this.user.id)
+		this.router.navigate([/user/login])
     }
+
+	update(updateForm){
+		this.userService.updateUser(this.user.id, updateForm)
+	}
 }

@@ -4,15 +4,16 @@
 
 
 <div class="wrapper">
-    <form class="form-signin" #registerForm="ngForm">
+    <form autocomplete="off" #updateForm="ngForm" (ngSubmit)="login(updateForm.value)">
       <h6>Username</h6>
-        <input (ngModel)="userName" class="form-control" name="userName" type="text" value="{{user.userName}}" /> 
+        <input (ngModel)="userName" class="form-control" name="userName" type="text" > 
       <h6>First Name</h6>
-        <input (ngModel)="firstName" class="form-control" name="firstName" type="text" value="{{user.firstName}}" />    
+        <input (ngModel)="firstName" class="form-control" name="firstName" type="text" >    
       <h6>Last Name</h6>
-        <input (ngModel)="lastName" class="form-control" name="lastName" type="text" value="{{user.lastName}}" />
+        <input (ngModel)="lastName" class="form-control" name="lastName" type="text" >
 
-      <button class="btn btn-lg btn-primary btn-block" type="button">Delete</button>   
+	  <a type="sumbit" (click)="update(updateForm.value)">Update</a>
+      <button type="button" (click)="deleteAcount()" type="button">Delete</button>   
       <button routerLink="/login" class="btn btn-lg btn-primary btn-block" type="submit">Logout</button>   
     
     </form>

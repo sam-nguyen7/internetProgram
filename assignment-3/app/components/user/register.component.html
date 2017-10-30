@@ -1,15 +1,15 @@
 <span>Register</span>
 
 <div class="wrapper">
-    <form class="form-signin" #registerForm="ngForm" (ngSubmit)="register(newUser.value)">       
+    <form class="form-signin" #registerForm="ngForm" (ngSubmit)="register(regUser.value)">       
       <h2 class="form-signin-heading">Register</h2>
-      <input (ngModel)="username" name="username" class="form-control" type="text" placeholder="Username"/>
+      <input (ngModel)="userName" name="userName" class="form-control" type="text" placeholder="Username"/>
       <input (ngModel)="firstName" name="firstName" class = "form-control" type="text" placeholder="Firstname">
       <input (ngModel)="lastName" name="lastName" class = "form-control" type="text" placeholder="Lastname">      
       <input (ngModel)="password" name="password" type="password" class="form-control" type="text" placeholder="Password"/>            
       <input (ngModel)="password2" name="password2"class = "form-control" type="password" placeholder="Verify Password">
       
-      <a (click)="update(user.value)" class="btn-success" role="button" id="register_button" type="submit"> Register </a>  
+      <a type="submit" (click)="registerUser(regUSer.value)">Register</a>  
       <a routerLink="/login" class="btn-danger" role="button" id="back_button"> Cancel </a>   
     </form>
   </div>
