@@ -23,14 +23,21 @@ var UserService = (function () {
     UserService.prototype.findUserByCredentials = function (username, password) {
         return USERS.find(function (user) { return user.userName === username && user.password === password; });
     };
-    UserService.prototype.createUser = function (user) {
-        USERS.push(user);
+    UserService.prototype.createUser = function (regUser) {
+        var id = (Math.random() * 100).toString;
+        var idNum = String(Math.floor(Math.random() * 100));
+        USERS.push({ id: idNum, userName: regUser.userName, password: regUser.userName, firstName: regUser.userName, lastName: regUser.userName });
+        return USERS.find(function (user) { return user.userName === regUser.userName; });
     };
-    UserService.prototype.updateUser = function (userId, user) {
-        USERS[userId] = user;
+    UserService.prototype.updateUser = function (userId, updateForm) {
+        var updatedUser = { id: userId, userName: updateForm.userName, password: updateForm.password, firstName: updateForm.first, lastName: updateForm.last };
+        var i = USERS.findIndex(function (user) { return user.id === userId; });
+        USERS.splice(i, 1);
+        USERS.push(updatedUser);
     };
     UserService.prototype.deleteUser = function (userId) {
-        delete USERS[userId];
+        var i = USERS.findIndex(function (user) { return user.id === userId; });
+        USERS.splice(i, 1);
     };
     return UserService;
 }());

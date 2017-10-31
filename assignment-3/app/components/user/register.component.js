@@ -8,48 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
 var user_service_1 = require("../../services/user.service");
+var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var RegisterComponent = (function () {
     function RegisterComponent(userService, route) {
         this.userService = userService;
         this.route = route;
     }
-    RegisterComponent.prototype.register = function (registerForm) {
-        if (registerForm.password == registerForm.password2 && registerForm.password != null && registerForm.userName != null && registerForm.firstName != null && registerForm.lastName != null) {
-            var user = {
-                userName: '',
-                firstName: '',
-                lastName: '',
-                password: '',
-            };
-            user.userName = registerForm.username;
-            user.firstName = registerForm.firstname;
-            user.lastName = registerForm.lastname;
-            user.password = registerForm.password;
-            this.userService.createUser(user);
-            this.route.navigate(['/user', user.id]);
+    RegisterComponent.prototype.registerUser = function (regUser) {
+        if (regUser.password === regUser.verifyPassword) {
+            var User = this.userService.createUser(regUser);
+            this.route.navigate(['/user', User.id]);
         }
         else {
-            this.errorMessage = "Password is not right";
+            console.log("something");
         }
-    };
-    RegisterComponent.prototype.update = function (userForm) {
-        var user = {
-            userName: '',
-            firstName: '',
-            lastName: '',
-            password: '',
-        };
-        this.user = this.userService.findUserByUsername(userForm.username);
-        console.log(this.user);
-        user.userName = userForm.username;
-        user.firstName = userForm.firstname;
-        user.lastName = userForm.lastname;
-        user.password = userForm.password;
-        user.id = this.user.id;
-        this.userService.updateUser(this.user.id, userForm);
     };
     return RegisterComponent;
 }());

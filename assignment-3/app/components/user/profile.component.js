@@ -12,15 +12,20 @@ var core_1 = require("@angular/core");
 var user_service_1 = require("../../services/user.service");
 var router_1 = require("@angular/router");
 var ProfileComponent = (function () {
-    function ProfileComponent(userService, route) {
-        this.userService = userService;
+    function ProfileComponent(route, router, userService) {
         this.route = route;
+        this.router = router;
+        this.userService = userService;
     }
     ProfileComponent.prototype.ngOnInit = function () {
         this.user = this.userService.findUserById(this.route.snapshot.params['uid']);
     };
-    ProfileComponent.prototype.delete = function () {
-        this.userService.deleteUser(this.userService.findUserById(this.user.id));
+    ProfileComponent.prototype.deleteAccount = function () {
+        this.userService.deleteUser(this.user.id);
+        this.router.navigate([/user/login]);
+    };
+    ProfileComponent.prototype.update = function (updateForm) {
+        this.userService.updateUser(this.user.id, updateForm);
     };
     return ProfileComponent;
 }());
@@ -28,7 +33,7 @@ ProfileComponent = __decorate([
     core_1.Component({
         templateUrl: 'app/components/user/profile.component.html'
     }),
-    __metadata("design:paramtypes", [user_service_1.UserService, router_1.ActivatedRoute])
+    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router, user_service_1.UserService])
 ], ProfileComponent);
 exports.ProfileComponent = ProfileComponent;
 //# sourceMappingURL=profile.component.js.map
