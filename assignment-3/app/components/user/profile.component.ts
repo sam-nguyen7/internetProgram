@@ -23,7 +23,7 @@ export class ProfileComponent {
     deleteAccount()
     {
         this.userService.deleteUser(this.user.id)
-		this.router.navigate([/user/login])
+		this.router.navigate(["/user/login"])
     }
 
 	update(updateForm){

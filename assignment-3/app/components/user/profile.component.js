@@ -22,7 +22,7 @@ var ProfileComponent = (function () {
     };
     ProfileComponent.prototype.deleteAccount = function () {
         this.userService.deleteUser(this.user.id);
-        this.router.navigate([/user/login]);
+        this.router.navigate(["/user/login"]);
     };
     ProfileComponent.prototype.update = function (updateForm) {
         this.userService.updateUser(this.user.id, updateForm);

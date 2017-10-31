@@ -34,8 +34,9 @@ export class UserService
         USERS.push(updatedUser);
     }
     
-    deleteUser(userId){
-        let i = USERS.findIndex(user => user.id === userId);
+    deleteUser(id) {
+        //if id matches userID then delete
+        let i = USERS.findIndex(user => user.id === id);
         USERS.splice(i,1);
     }
 

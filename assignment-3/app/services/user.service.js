@@ -35,8 +35,9 @@ var UserService = (function () {
         USERS.splice(i, 1);
         USERS.push(updatedUser);
     };
-    UserService.prototype.deleteUser = function (userId) {
-        var i = USERS.findIndex(function (user) { return user.id === userId; });
+    UserService.prototype.deleteUser = function (id) {
+        //if id matches userID then delete
+        var i = USERS.findIndex(function (user) { return user.id === id; });
         USERS.splice(i, 1);
     };
     return UserService;

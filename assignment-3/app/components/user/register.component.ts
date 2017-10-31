@@ -12,12 +12,14 @@ export class RegisterComponent {
     constructor(private userService: UserService, private route: Router) { }
 
      registerUser(regUser){
-        if(regUser.password === regUser.verifyPassword){
+        if(regUser.password === regUser.password2){
+            console.log(regUser)
             let User = this.userService.createUser(regUser);
             this.route.navigate(['/user',User.id]);
+            console.log("success")
         }
         else{
-			console.log("something");
+			console.log("wrong password");
         }
     } 
 

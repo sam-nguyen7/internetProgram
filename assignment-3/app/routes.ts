@@ -3,7 +3,7 @@ import { LoginComponent } from './components/user/login.component'
 import { ProfileComponent } from './components/user/profile.component'
 import { RegisterComponent } from './components/user/register.component'
  
-export const appRoutes = [
+export const appRoutes:Routes = [
       {path:'login',component:LoginComponent},
       {path:'user/:uid', component: ProfileComponent},
 
