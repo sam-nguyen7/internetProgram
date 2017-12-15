@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <form class="form-signin" #registerForm="ngForm" (ngSubmit)="registerUser(registerForm.value)">       
+      <h2 class="form-signin-heading">Register</h2>
+      <input (ngModel)="userName" name="userName" class="form-control" type="text" placeholder="Username"/>
+      <input (ngModel)="password" name="password" type="password" class="form-control" type="text" placeholder="Password"/>            
+      <input (ngModel)="password2" name="password2"class = "form-control" type="password" placeholder="Verify Password">
+      
+      <a type="submit" (click)="registerUser(registerForm.value)">Register</a>  
+      <a routerLink="/login" class="btn-danger" role="button" id="back_button"> Cancel </a>   
+    </form>
+  </div>
