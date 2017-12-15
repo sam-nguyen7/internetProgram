@@ -1,6 +1,7 @@
-<h1>Login</h1>
-<hr>
+<h1> Missionaries Locations </h1>
+
 <div class="col-md-4">
+    <h3> Log In</h3>
     <form autocomplete="off" #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
         <div class="form-group" >
             <label for="userName">User Name:</label>
@@ -15,3 +16,33 @@
         <button type="button" class="btn btn-default" [routerLink]="['/register']"> Register </button>
     </form>
 </div>
+
+
+<!--Footer-->
+<footer class="page-footer blue center-on-small-only">
+
+    <!--Footer Links-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-6">
+                <h5 class="title">Purpose:</h5>
+                <p>To connect missionaries together by showing where each missionaries in the world are.</p>
+                <p>To begin, please click register.</p>
+            </div>
+            <!--/.First column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2015 Copyright: Sam Nguyen
+
+        </div>
+    </div>
+    <!--/.Copyright-->
+
+</footer>

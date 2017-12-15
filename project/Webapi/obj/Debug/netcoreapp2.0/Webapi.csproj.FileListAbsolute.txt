@@ -8,3 +8,13 @@
 /Users/SamNguyen/Desktop/internetProgram/assignment-4/Webapi/obj/Debug/netcoreapp2.0/Webapi.AssemblyInfo.cs
 /Users/SamNguyen/Desktop/internetProgram/assignment-4/Webapi/obj/Debug/netcoreapp2.0/Webapi.dll
 /Users/SamNguyen/Desktop/internetProgram/assignment-4/Webapi/obj/Debug/netcoreapp2.0/Webapi.pdb
+/Users/SamNguyen/Desktop/internetProgram/project/Webapi/bin/Debug/netcoreapp2.0/Webapi.deps.json
+/Users/SamNguyen/Desktop/internetProgram/project/Webapi/bin/Debug/netcoreapp2.0/Webapi.runtimeconfig.json
+/Users/SamNguyen/Desktop/internetProgram/project/Webapi/bin/Debug/netcoreapp2.0/Webapi.runtimeconfig.dev.json
+/Users/SamNguyen/Desktop/internetProgram/project/Webapi/bin/Debug/netcoreapp2.0/Webapi.dll
+/Users/SamNguyen/Desktop/internetProgram/project/Webapi/bin/Debug/netcoreapp2.0/Webapi.pdb
+/Users/SamNguyen/Desktop/internetProgram/project/Webapi/obj/Debug/netcoreapp2.0/Webapi.csproj.CoreCompileInputs.cache
+/Users/SamNguyen/Desktop/internetProgram/project/Webapi/obj/Debug/netcoreapp2.0/Webapi.AssemblyInfoInputs.cache
+/Users/SamNguyen/Desktop/internetProgram/project/Webapi/obj/Debug/netcoreapp2.0/Webapi.AssemblyInfo.cs
+/Users/SamNguyen/Desktop/internetProgram/project/Webapi/obj/Debug/netcoreapp2.0/Webapi.dll
+/Users/SamNguyen/Desktop/internetProgram/project/Webapi/obj/Debug/netcoreapp2.0/Webapi.pdb

@@ -12669,11 +12669,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/SamNguyen/Desktop/internetProgram/assignment-4/Webapi/Webapi.csproj",
+      "projectUniqueName": "/Users/SamNguyen/Desktop/internetProgram/project/Webapi/Webapi.csproj",
       "projectName": "Webapi",
-      "projectPath": "/Users/SamNguyen/Desktop/internetProgram/assignment-4/Webapi/Webapi.csproj",
+      "projectPath": "/Users/SamNguyen/Desktop/internetProgram/project/Webapi/Webapi.csproj",
       "packagesPath": "/Users/SamNguyen/.nuget/packages/",
-      "outputPath": "/Users/SamNguyen/Desktop/internetProgram/assignment-4/Webapi/obj/",
+      "outputPath": "/Users/SamNguyen/Desktop/internetProgram/project/Webapi/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

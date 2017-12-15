@@ -51,6 +51,7 @@ var USERS = [
     { id: "123", userName: "alice", password: "alice", firstName: "Alice", lastName: "Wonder" },
     { id: "234", userName: "bob", password: "bob", firstName: "Bob", lastName: "Marley" },
     { id: "345", userName: "charly", password: "charly", firstName: "Charly", lastName: "Garcia" },
-    { id: "456", userName: "jannunzi", password: "jannunzi", firstName: "Jose", lastName: "Annunzi" }
+    { id: "456", userName: "jannunzi", password: "jannunzi", firstName: "Jose", lastName: "Annunzi" },
+    { id: "1", userName: "sam", password: "sam", firstName: "Sam", lastName: "Nguyen" }
 ];
 //# sourceMappingURL=user.service.js.map
